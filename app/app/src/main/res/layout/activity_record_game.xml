@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecordGameActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/homeScoreView"
+        android:layout_weight="1"
+            android:text="Home Score"
+            android:gravity="center"
+            android:background="@color/homeColor"
+            android:layout_marginRight="10dp"
+        />
+        <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/quarterView"
+        android:layout_weight="2"
+            android:text="Current Quarter"
+            android:gravity="center"
+            android:background="#CCCCCC"
+        />
+        <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/awayScoreView"
+        android:layout_weight="1"
+            android:text="Away Score"
+            android:gravity="center"
+            android:background="@color/awayColor"
+            android:layout_marginLeft="10dp"
+        />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/newQuarterButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Next Quarter"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/addAssistsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Assist" />
+
+        <Button
+            android:id="@+id/addReboundButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add a Rebound" />
+
+        <Button
+            android:id="@+id/addFoulButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add a Foul" />
+
+        <Button
+            android:id="@+id/addTurnoverButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add a Turnover" />
+
+        <Button
+            android:id="@+id/addPointsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Points" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addPointsLL"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/addOneBtn"
+                android:layout_weight="1"
+                android:text="+1" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/addTwoBtn"
+                android:layout_weight="1"
+                android:text="+2" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/addThreeBtn"
+                android:layout_weight="1"
+                android:text="+3" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scoreOptionsLL"
+        android:layout_gravity="fill_vertical"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:layout_weight="1"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/homeChoices"
+                    android:layout_gravity="bottom">
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/white"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:hint="HomeOther"
+                    android:layout_gravity="bottom"
+                    android:background="@color/homeColor"
+                    android:id="@+id/homeOtherScore"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:layout_weight="1"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/awayChoices"
+                    android:layout_gravity="bottom">
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/white"
+                    />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Away"
+                    android:hint="AwayOther"
+                    android:background="@color/awayColor"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/awayOtherScore"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
